@@ -36,6 +36,8 @@ namespace WatchIp.SDK.Extensions
                 options.UseSqlite("Data Source=WatchIpDb.db");
             });
 
+            services.AddScoped<IIpLogService, IpLogService>();
+
             return services;
         }
     }
